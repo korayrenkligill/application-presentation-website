@@ -1,0 +1,291 @@
+header {
+  width: 100%;
+  height: 50vh;
+  background-color: #15172f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+header h1 {
+  font-size: 4em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.5em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #d8d8d8;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+section.carousel {
+  background-color: #f0f1fd;
+  padding: 100px;
+}
+section.carousel .frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.carousel .swiper-slide img {
+  display: block;
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+}
+section.our-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 20%;
+  gap: 20px;
+  background-color: #5258fb;
+}
+section.our-mission div:nth-child(1) {
+  display: flex;
+  justify-content: flex-end;
+}
+section.our-mission div:nth-child(1) img {
+  width: 70%;
+}
+section.our-mission div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+section.our-mission div:nth-child(2) h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+}
+section.our-mission div:nth-child(2) p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #d8d8d8;
+}
+section.contact-us {
+  padding: 150px 20%;
+}
+section.contact-us div {
+  background-color: #5258fb;
+  padding: 100px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+section.contact-us div p {
+  flex: 3;
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+}
+section.contact-us div a {
+  text-align: center;
+  flex: 1;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
+  background-color: #15172f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+section.contact-us div a:hover {
+  color: #5258fb;
+  background-color: #f0f1fd;
+}
+section.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  text-align: center;
+  margin-bottom: 150px;
+}
+section.team div.header h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 3rem;
+  color: #15172f;
+}
+section.team div.header p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  color: #15172f;
+}
+section.team div.grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 70px;
+}
+section.team div.grid .grid-item img {
+  max-width: 100px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+section.team div.grid .grid-item .name {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #5258fb;
+  margin-bottom: 5px;
+}
+section.team div.grid .grid-item .position {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  color: #15172f;
+  margin-bottom: 20px;
+}
+section.team div.grid .grid-item .comment {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.8rem;
+  color: #acacac;
+}
+@media screen and (min-width: 2000px) {
+  header h1 {
+    font-size: 6em;
+  }
+  header p {
+    font-size: 2em;
+  }
+  section.our-mission {
+    display: grid;
+  }
+  section.our-mission div:nth-child(1) img {
+    width: 100%;
+  }
+  section.our-mission div:nth-child(2) h1 {
+    font-size: 4rem;
+  }
+  section.our-mission div:nth-child(2) p {
+    font-size: 1.5rem;
+  }
+  section.contact-us div a {
+    font-size: 1.4rem;
+    padding: 20px 20px;
+  }
+  section.team div.header h1 {
+    font-size: 5rem;
+  }
+  section.team div.header p {
+    font-size: 2rem;
+  }
+  section.team div.grid .grid-item img {
+    max-width: 200px;
+  }
+  section.team div.grid .grid-item .name {
+    font-size: 2rem;
+  }
+  section.team div.grid .grid-item .position {
+    font-size: 1.5rem;
+  }
+  section.team div.grid .grid-item .comment {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section.contact-us {
+    padding: 150px 10%;
+  }
+  section.carousel {
+    padding: 30px;
+  }
+  section.carousel .swiper-slide img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header h1 {
+    font-size: 3em;
+  }
+  header p {
+    font-size: 1em;
+  }
+  section.contact-us div {
+    padding: 70px;
+  }
+  section.contact-us div p {
+    font-size: 1.5rem;
+  }
+  section.carousel .swiper-slide img {
+    width: 60%;
+  }
+  section.our-mission {
+    grid-template-columns: 1fr;
+    padding: 0px 10% 50px 10%;
+  }
+  section.our-mission div:nth-child(1) {
+    justify-content: center;
+  }
+  section.our-mission div:nth-child(1) img {
+    width: 30%;
+    min-width: 280px;
+  }
+  section.our-mission div:nth-child(2) {
+    align-items: center;
+    justify-content: center;
+  }
+  section.our-mission div:nth-child(2) h1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  section.our-mission div:nth-child(2) p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    color: #d8d8d8;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.our-mission {
+    padding: 80px 5%;
+  }
+  section.contact-us {
+    padding: 0px;
+    margin-bottom: 100px;
+  }
+  section.contact-us div {
+    padding: 60px;
+    border-radius: 0px;
+    gap: 60px;
+  }
+  section.contact-us div p {
+    font-size: 1.2rem;
+  }
+  section.contact-us div a {
+    font-size: 1rem;
+  }
+  section.carousel {
+    padding: 0px;
+    background-color: #f0f1fd;
+  }
+  section.carousel .swiper-slide img {
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 475px) {
+  section.contact-us div {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 10px;
+  }
+  section.contact-us div p {
+    text-align: center;
+  }
+}

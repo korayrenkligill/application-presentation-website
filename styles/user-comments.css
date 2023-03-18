@@ -1,0 +1,356 @@
+header {
+  width: 100%;
+  height: 50vh;
+  background-color: #15172f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+header h1 {
+  font-size: 4em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.5em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #d8d8d8;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 40px;
+}
+section.interactive-comments {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  padding: 100px 15%;
+}
+section.interactive-comments div.profiles {
+  min-width: 360px;
+  position: relative;
+  height: 400px;
+}
+section.interactive-comments div.profiles .frame {
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+section.interactive-comments div.profiles .frame img {
+  max-width: 150px;
+  border-radius: 150px;
+}
+section.interactive-comments div.profiles .frame.active {
+  filter: grayscale(0%);
+  z-index: 100;
+}
+section.interactive-comments div.profiles .frame:nth-child(1) {
+  background-color: #ffffa9;
+  border-radius: 40px;
+  left: 50px;
+  top: 50px;
+}
+section.interactive-comments div.profiles .frame:nth-child(2) {
+  background-color: #a0ffa0;
+  border-radius: 40px;
+  left: 350px;
+  top: 200px;
+}
+section.interactive-comments div.profiles .frame:nth-child(3) {
+  background-color: #a1ecff;
+  border-radius: 500px;
+  left: 130px;
+  top: 180px;
+}
+section.interactive-comments div.profiles .frame:nth-child(4) {
+  background-color: pink;
+  border-radius: 0px 500px 0px 00px;
+  left: 300px;
+  top: 40px;
+}
+section.interactive-comments div.comments {
+  display: flex;
+  align-items: center;
+}
+section.interactive-comments div.comments p {
+  font-family: 'Noto Sans', sans-serif;
+  color: #15172f;
+}
+section.interactive-comments div.comments p span {
+  color: #5258fb;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1rem;
+}
+section.sponsors {
+  background-color: #5258fb;
+  padding: 100px 20%;
+}
+section.sponsors h1 {
+  font-family: 'Noto Sans', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+}
+section.sponsors div {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+section.sponsors div p {
+  font-family: 'Noto Sans', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+section.comments {
+  padding: 100px 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-color: #f0f1fd;
+}
+section.comments a {
+  display: inline-block;
+  background-color: #5258fb;
+  padding: 15px 40px;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Noto Sans', sans-serif;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+section.comments a:hover {
+  color: #5258fb;
+  background-color: #f0f1fd;
+  border: 1px solid #5258fb;
+}
+section.comments .grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+}
+section.comments .grid .grid-item {
+  padding: 40px;
+  transition: all 0.2s;
+}
+section.comments .grid .grid-item .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+section.comments .grid .grid-item .profile div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+section.comments .grid .grid-item .profile div p {
+  transition: all 0.2s;
+  font-size: 1em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #0f1126;
+  font-weight: bold;
+}
+section.comments .grid .grid-item .profile img {
+  max-width: 50px;
+  border-radius: 100px;
+}
+section.comments .grid .grid-item p {
+  transition: all 0.2s;
+  font-size: 1em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #15172f;
+}
+section.comments .grid .grid-item .date {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+section.comments .grid .grid-item:nth-child(1) {
+  border-radius: 50px 50px 5px 50px;
+}
+section.comments .grid .grid-item:nth-child(2) {
+  border-radius: 50px 50px 50px 5px;
+  border: 2px solid #5258fb;
+}
+section.comments .grid .grid-item:nth-child(3) {
+  border-radius: 50px 5px 50px 50px;
+  border: 2px solid #5258fb;
+}
+section.comments .grid .grid-item:nth-child(4) {
+  border-radius: 5px 50px 50px 50px;
+}
+section.comments .grid .active {
+  background-color: #5258fb;
+}
+section.comments .grid .active .profile div p {
+  color: #ffffff;
+}
+section.comments .grid .active p {
+  color: #d8d8d8;
+}
+@media screen and (min-width: 2000px) {
+  header h1 {
+    font-size: 6em;
+  }
+  header p {
+    font-size: 2em;
+  }
+  section.interactive-comments div.comments p {
+    font-size: 1.5rem;
+  }
+  section.interactive-comments div.comments p span {
+    font-size: 1.6rem;
+  }
+  section.comments .grid .grid-item .profile div p {
+    font-size: 1.8em;
+  }
+  section.comments .grid .grid-item .profile img {
+    max-width: 80px;
+  }
+  section.comments .grid .grid-item p {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section.interactive-comments {
+    padding: 100px 5%;
+  }
+  section.comments {
+    padding: 100px 5%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header h1 {
+    font-size: 3em;
+  }
+  header p {
+    font-size: 1em;
+  }
+  section.interactive-comments {
+    grid-template-columns: 360px 1fr;
+    padding: 100px 5%;
+  }
+  section.interactive-comments div.profiles .frame {
+    width: 140px;
+    height: 140px;
+  }
+  section.interactive-comments div.profiles .frame img {
+    max-width: 100px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(1) {
+    left: 10px;
+    top: 50px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(2) {
+    left: 200px;
+    top: 170px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(3) {
+    left: 50px;
+    top: 180px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(4) {
+    left: 150px;
+    top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.interactive-comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section.interactive-comments div.profiles {
+    height: 360px;
+  }
+  section.interactive-comments div.comments {
+    text-align: center;
+  }
+  section.comments {
+    padding: 50px 5%;
+  }
+  section.comments .grid {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  section.comments .grid .grid-item:nth-child(1) {
+    border-radius: 50px;
+    order: 1;
+  }
+  section.comments .grid .grid-item:nth-child(2) {
+    order: 2;
+    border: 2px solid #5258fb;
+    border-radius: 50px;
+  }
+  section.comments .grid .grid-item:nth-child(3) {
+    order: 4;
+    border: 2px solid #5258fb;
+    border-radius: 50px;
+  }
+  section.comments .grid .grid-item:nth-child(4) {
+    border-radius: 50px;
+    order: 3;
+  }
+  section.sponsors {
+    padding: 30px 10%;
+  }
+  section.sponsors h1 {
+    font-size: 1rem;
+  }
+  section.sponsors div {
+    margin-top: 40px;
+    gap: 30px;
+  }
+  section.sponsors div p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  section.interactive-comments {
+    grid-template-columns: 360px 1fr;
+    padding: 100px 5%;
+  }
+  section.interactive-comments div.profiles {
+    min-width: 200px;
+    height: 250px;
+  }
+  section.interactive-comments div.profiles .frame {
+    width: 100px;
+    height: 100px;
+  }
+  section.interactive-comments div.profiles .frame img {
+    max-width: 70px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(1) {
+    left: 0px;
+    top: 50px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(2) {
+    left: 120px;
+    top: 130px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(3) {
+    left: 10px;
+    top: 140px;
+  }
+  section.interactive-comments div.profiles .frame:nth-child(4) {
+    left: 100px;
+    top: 40px;
+  }
+}

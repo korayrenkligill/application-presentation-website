@@ -1,0 +1,101 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 15%;
+  background-color: #15172f;
+}
+footer h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+footer .download {
+  display: inline-block;
+  padding: 15px 50px;
+  background-color: #5258fb;
+  color: #ffffff;
+  border-radius: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-bottom: 70px;
+  transition: all 0.3s;
+}
+footer .download:hover {
+  background-color: #f0f1fd;
+  color: #5258fb;
+}
+footer .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+}
+footer .grid div img {
+  max-width: 60px;
+}
+footer .grid ul {
+  list-style: none;
+}
+footer .grid ul li {
+  margin-bottom: 20px;
+}
+footer .grid ul h2 {
+  font-family: 'Noto Sans', sans-serif;
+  color: #ffffff;
+}
+footer .grid ul a {
+  color: #d8d8d8;
+  text-decoration: none;
+  font-family: 'Noto Sans', sans-serif;
+}
+footer .grid ul i {
+  margin-right: 15px;
+}
+@media screen and (min-width: 2000px) {
+  footer .grid {
+    gap: 350px;
+  }
+  footer .grid h2 {
+    font-size: 2rem;
+  }
+  footer .grid a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 50px 5%;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 475px) {
+  footer {
+    padding: 50px 5%;
+  }
+  footer h1 {
+    text-align: center;
+  }
+  footer .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  footer .grid a {
+    display: block;
+    text-align: center;
+  }
+  footer .grid h2 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,42 @@
+Navbar
+    -Logo -
+    -Navigation Links -
+        -Company -
+        -Member Stories -
+        -Usage -
+    -Download -
+
+Header
+    -Asistanın bir sözü |
+    -Açıklama |
+    -Download button |
+    -özellikleri absolute
+    
+Main Page
+    -Deneyim tarzı bölüm
+        -Aktif indirme -
+        -uygulama kaç yıldır Aktif -
+        -gönderilen destek -
+    -Öğrenmenin sınırı yoktur bölümü
+        -yapay zeka fotoğrafı -
+        -Açıklama
+            -Başlık |
+            -Tanıtım yazısı |
+            - Uygulamanın açıklama sayfası |
+    -Uygulamaya gelen bir kaç yorum
+        -grid ile yorumlar
+        -yorumlar sayfasına button
+    -Uygulama özellikleri
+        -özellikler
+        -fotoğrafı
+    -Uygulama avantajları
+Footer
+
+Colors
+#ffffff
+#5258fb
+#474de4
+#0f1126
+
+Font
+font-family: 'Noto Sans', sans-serif;

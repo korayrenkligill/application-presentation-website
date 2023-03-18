@@ -1,0 +1,161 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@color-white:#ffffff;
+@color-grey:#d8d8d8;
+@color-darkgrey:#acacac;
+@color-lightblue:#5258fb;
+@color-darkblue:#15172f;
+@color-extradarkblue:#0f1126;
+@color-navbar:#0f1126c0;
+
+@font-notoSans: 'Noto Sans', sans-serif;
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15%;
+    background-color: @color-navbar;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    #nav-logo{
+        width: 50px;
+        transition: all 1s;
+    }
+    #nav-logo:hover{
+        transform: scale(1.05) rotate(360deg);
+    }
+    .nav-first{
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    label, input{
+        display: none;
+    }
+    .navigations{
+        order: 2;
+        list-style: none;
+        .navigation-item{
+            display: inline-block;
+            a{
+                display: inline-block;
+                padding: 30px 20px;
+                font-family: @font-notoSans;
+                text-decoration: none;
+                color: @color-grey;
+                transform: translate(0px);
+                font-size: 1rem;
+                transition: all .3s;
+            }
+        }
+        .navigation-item:not(:last-child){
+            margin-right: 20px;
+        }
+        .navigation-item:hover a{
+            transform: translate(0px,-2px) scale(1.04);
+            color: @color-white;
+            text-shadow: 0px 0px 2px @color-grey;
+        }
+        .active a{
+            color: @color-white !important;
+        }
+    }
+    .download-button{
+        order: 3;
+        padding: 15px 25px;
+        background-color: @color-lightblue;
+        border-radius: 20px;
+        color: @color-white;
+        font-family: @font-notoSans;
+        text-decoration: none;
+        transition: all .3s;
+    }
+    .download-button:hover{
+        background-color: @color-white;
+        color: @color-lightblue;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    nav{
+        .navigations .navigation-item a{
+            font-size: 1.5rem;
+        }
+        .download-button{
+            font-size: 1.5rem;
+        }
+    } 
+}
+@media screen and (max-width: 1440px) {
+    nav{
+        padding: 0px 5%;
+    } 
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav{
+        top: 0px;
+        left: 0px;
+        padding: 0px 2%;
+        .navigations .navigation-item a{
+            font-size: .8rem;
+        }
+        .download-button{
+            font-size: .8rem;
+        }
+    } 
+}
+@media screen and (max-width: 768px) {
+    nav{
+        bottom: 0px;
+        left: 0px;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 3% 10px 3%;
+        background-color: @color-extradarkblue;
+        .nav-first{
+            order: 3;
+            width: 100%;
+            label{
+                display: inline-block;
+                font-size: 2rem;
+                color: @color-lightblue;
+            }
+        }
+        .navigations .navigation-item a{
+            font-size: 1.2rem;
+        }
+        .navigations .navigation-item:last-child{
+            margin-bottom: 20px;
+        }
+        .download-button{
+            font-size: 1.2rem;
+        }
+        .navigations{
+            .navigation-item{
+                display: block;
+                a{
+                    display: block;
+                    padding: 30px 10px;
+                }
+            }
+        }
+        .download-button{
+            order: 1;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .navigations , .download-button{
+            display: none;
+        } 
+        #menu-checkbox:checked ~ ul,#menu-checkbox:checked ~ a{
+            display: block;
+        }
+    }    
+}

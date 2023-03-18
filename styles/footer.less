@@ -1,0 +1,119 @@
+@color-white:#ffffff;
+@color-grey:#d8d8d8;
+@color-darkgrey:#acacac;
+@color-bluewhite: #f0f1fd;
+@color-lightblue:#5258fb;
+@color-darkblue:#15172f;
+@color-extradarkblue:#0f1126;
+
+@font-notoSans: 'Noto Sans', sans-serif;
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15%;
+    background-color: @color-darkblue;
+    h1{
+        font-family: @font-notoSans;
+        font-size: 3rem;
+        color: @color-white;
+        margin-bottom: 30px;
+        text-align: center;
+
+    }
+    .download{
+        display: inline-block;
+        padding: 15px 50px;
+        background-color: @color-lightblue;
+        color: @color-white;
+        border-radius: 20px;
+        font-family: @font-notoSans;
+        font-size: 1.2rem;
+        text-decoration: none;
+        margin-bottom: 70px;
+        transition: all .3s;
+    }
+    .download:hover{
+        background-color: @color-bluewhite;
+        color: @color-lightblue;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 100px;
+        div{
+            img{
+                max-width: 60px;
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 20px
+            };
+            h2{
+                font-family: @font-notoSans;
+                color: @color-white;
+            }
+            a{
+                color: @color-grey;
+                text-decoration: none;
+                font-family: @font-notoSans;
+            }
+            i{
+                margin-right: 15px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 2000px){
+    footer{
+        .grid{
+            gap: 350px;
+            h2{
+                font-size: 2rem;
+            }
+            a{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    footer{
+        .grid{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    footer{
+        padding: 50px 5%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 475px){
+    footer{
+        h1{
+            text-align: center;
+        }
+        padding: 50px 5%;
+        .grid{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            a{
+                display: block;
+                text-align: center;
+            }
+            h2{
+                text-align: center;
+            }
+        }
+    }
+}
